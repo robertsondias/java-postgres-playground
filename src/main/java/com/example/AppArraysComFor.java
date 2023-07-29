@@ -11,7 +11,7 @@ public class AppArraysComFor {
         System.out.println(Arrays.toString(vetor3));
         System.out.println();
 
-        double matriz [][] = new double [5][6];
+        double matriz [][] = new double [3][4];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[1].length; j++) {
                 matriz[i][j] = (i * matriz[i].length + j) * 10;                
