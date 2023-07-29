@@ -13,6 +13,7 @@ public class App {
         new App();
     }
 
+    
     public App(){
         try(var conn = getConnection()){
             carregarDriverJDBC();
