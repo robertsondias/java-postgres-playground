@@ -25,7 +25,7 @@ public class AppScanner {
 
         System.out.println("Digite o ano de nascimento: ");
         cliente.setAnoNascimento(scanner.nextInt());
-        
+            
         cliente.setRenda(-1000);
         cliente.setSexo('M');
         cliente.setAnoNascimento(1981);
@@ -38,5 +38,7 @@ public class AppScanner {
         System.out.println("Sexo: " + cliente.getSexo());
         System.out.println("Ano de Nascimento: " + cliente.getAnoNascimento());
         System.out.println("Cliente é especial: " + cliente.isEspecial());        
+
+        scanner.close();
     }
 }
