@@ -10,6 +10,10 @@ public class AppScanner {
         System.out.println("Digite seu nome: ");
         cliente.setNome (scanner.nextLine());
 
+        System.out.println("Digite seu sexo:");
+        String sexo = scanner.nextLine();
+        cliente.setSexo(sexo.charAt(0));
+
         System.out.println("Digite seu CPF: ");
         cliente.setCpf(scanner.nextLine());
 
@@ -22,12 +26,6 @@ public class AppScanner {
         System.out.println("Digite o ano de nascimento: ");
         cliente.setAnoNascimento(scanner.nextInt());
         
-        scanner.nextLine();
-        System.out.println("Digite seu sexo:");
-        String sexo = scanner.nextLine();
-        cliente.setSexo(sexo.charAt(0));
-
-
         cliente.setRenda(-1000);
         cliente.setSexo('M');
         cliente.setAnoNascimento(1981);
@@ -39,11 +37,6 @@ public class AppScanner {
         System.out.println("Renda: " + cliente.getRenda());
         System.out.println("Sexo: " + cliente.getSexo());
         System.out.println("Ano de Nascimento: " + cliente.getAnoNascimento());
-        System.out.println("Cliente é especial: " + cliente.isEspecial());
-        
-        
-        
-
-
+        System.out.println("Cliente é especial: " + cliente.isEspecial());        
     }
 }
