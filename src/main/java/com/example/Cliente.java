@@ -85,4 +85,8 @@ public class Cliente {
             this.renda = renda;
         else System.out.println("A Renda deve ser maior ou igual que zero");        
     }
+
+    public String toString(){
+        return "Cliente: " + nome + " Cidade: " + cidade;
+    }
 }

@@ -7,7 +7,7 @@ public class AppOpLogicos {
     }
     
     boolean b(boolean valor){
-        System.out.println("b");
+        System.out.println("b");        
         return valor;
     }
 
