@@ -4,18 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class AppBd {
-    private static final String PASSWORD = "";
-    private static final String USERNAME = "gitpod";
-    private static final String JDBC_URL = "jdbc:postgresql://localhost/postgres";
+import com.example.dao.ConnectionManager;
+import com.example.model.Marca;
+import com.example.model.Produto;
 
+public class AppBd {
     public static void main(String[] args) {
         new AppBd();
     }
 
     public AppBd(){
-        try(var conn = getConnection()){
-            carregarDriveJDBC();
+        try(var conn = ConnectionManager.getConnection()){
             listarEstados(conn);
             localizarEstado(conn, "PR");
             
@@ -137,10 +136,7 @@ public class AppBd {
         }
     }
 
-    private Connection getConnection() throws SQLException{
-        return DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
-
-    }
+    
 
     private void carregarDriveJDBC() {
         try {
